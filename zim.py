@@ -8,6 +8,8 @@ import sys
 import logging
 import os
 
+logging.basicConfig( level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(thread)d - %(name)s - %(module)s:%(funcName)s:%(lineno)d - %(message)s"  )
+		
 # Check if we run the correct python version
 try:
 	assert sys.version_info >= (3, 2)
