@@ -480,6 +480,7 @@ class PageTreeView(BrowserTreeView):
 	def do_drag_data_received(self, dragcontext, x, y, selectiondata, info, time):
 		assert selectiondata.get_target().name() == INTERNAL_PAGELIST_TARGET_NAME
 		names = unpack_urilist(selectiondata.get_data())
+		# TODO: SMI: drag and drop pages fails on following assertion
 		assert len(names) == 1
 		source = Path(names[0])
 
